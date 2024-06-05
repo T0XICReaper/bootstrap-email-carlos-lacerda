@@ -1,0 +1,33 @@
+.row-cols-3{
+    flex-direction: column;
+}
+
+.main-container{
+    /* border: 3px solid blue; */
+    min-height: 100vh;
+}
+.compose-btn{
+    /* border: 3px solid blue; */
+    min-height: 120px;
+}
+
+.email-section{
+    /* width: 360px; */
+    min-height: 420px;
+}
+
+.email-header{
+    min-height: 100px;
+}
+
+
+.email-box{
+   min-height: 0px; 
+}
+.email-content{
+    min-height: 300px;
+}
+.btn-spacing{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}        
