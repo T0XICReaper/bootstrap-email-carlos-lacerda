@@ -1,10 +1,11 @@
-.row-cols-3{
+/* .row-cols-3{
     flex-direction: column;
-}
+} */
 
 .main-container{
     /* border: 3px solid blue; */
     min-height: 100vh;
+    min-width: 100vw;
 }
 .compose-btn{
     /* border: 3px solid blue; */
@@ -14,10 +15,11 @@
 .email-section{
     /* width: 360px; */
     min-height: 420px;
+   /*  border: 3px solid blue;  */
 }
 
 .email-header{
-    min-height: 100px;
+    min-height: 145px;
 }
 
 
@@ -27,7 +29,32 @@
 .email-content{
     min-height: 300px;
 }
-.btn-spacing{
+
+/* .btn-spacing{
     margin-top: 10px;
     margin-bottom: 10px;
-}        
+} */
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+ }
+
+ .debug{
+    border: 3px solid red;
+ }
+ footer {
+   /*  display: flex;
+    justify-content: center; */
+    /* border: 3px solid green; */
+    position: fixed;
+    bottom: 0;
+}
+
+/* @media screen and (min-width: 1200px){
+    .compose-btn{
+        width: 300px;
+        height: 165px;
+    }
+} */
