@@ -8,122 +8,122 @@
     <link href=styles.css rel="stylesheet">
 </head>
 <body>
-    <div class="container text-center main-container"> <!-- background -->
-        <div  class="row row-cols-3" >
-                <div div class="container-fluid email-header col-12"> <!-- Nav bar -->
-                    <nav class="navbar bg-body-tertiary fixed-top">
-                        <div class="row-cols-1 col-6">
-                            Welcome to Super Awesome Email!
-                        </div>
-                        
-                        <div class="col-2"> <!-- profile icon (NOT)-->
-                            <img src="avatar.jpeg" alt="Avatar" class="avatar">
-                        </div>
-
-                        <div class="container-fluid">
-                          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <!-- NAVBAR BUTTON -->
-                            <span class="navbar-toggler-icon"></span> <!-- ICON FOR NAVBAR -->
-                          </button>
-
-                          <div class="offcanvas offcanvas-start h-100 w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> <!-- OFFCANVAS HEADER -->
-                            <div class="offcanvas-header">
-                                <div>Additional Settings</div>
-                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-
-                            <div class="offcanvas-body"> <!-- ALL OFFCANVAS SELECTORS (NOT FUNCTIONAL YET) -->
-                                <button type="button" class="btn btn-primary row col-12 btn-spacing">Inbox</button>
-                                <button type="button" class="btn btn-primary row col-12 btn-spacing">Sent</button>
-                                <button type="button" class="btn btn-primary row col-12 btn-spacing">Drafts</button>
-                                <button type="button" class="btn btn-primary row col-12 btn-spacing">Folders</button>
-                                <button type="button" class="btn btn-primary row col-12 btn-spacing">Spam</button>
-                                <button type="button" class="btn btn-primary row col-12 btn-spacing">More...</button>
-                        
-                            </div>
-                            
-                          </div>
-                          
-                          <div class="container-fluid align-self-end col-10 btn-spacing"> <!-- SEARCHBAR --> <!-- col-10 -->
-                            <form class="d-flex align-self-end" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </div>
-                        </div>
-                      </nav>
+    <div class="container-fluid text-center main-container debug row-cols-3 p-0 m-0"> <!-- background -->
+        <div class="container-fluid debug3"> <!-- Entire navbar "column" container -->
+            
+            <nav class="navbar bg-body-tertiary fixed-top debug"> <!-- Navbar -->
+                
+                <div class="container-fluid debug2"> <!-- One row for the welcome message and pfp -->
+                    <div class="col-6 debug"> <!-- Text on left side --> <!-- col-6 -->
+                        Welcome to Super Awesome Email!
+                    </div>
+    
+                    <div class="col-6 text-end debug"> <!-- profile icon --> <!-- col-6 -->
+                        <img src="avatar.jpeg" alt="Avatar" class="avatar">
+                    </div>
                 </div>
-                
-
-                
-
-            <div class="container-fluid row-cols-1 col-12 email-section" id="accordion"> <!-- CONTAINER FOR EMAILS SECTION --> <!-- id accordion is applied to all the collapsable email content with data-bs-parent="#accordion" in order to close the rest of the emails-->
               
-                <p class="text-start row email"> <!-- EMAIL-1 -->
-                    <button class="text-start btn btn-primary email-preview" type="button" data-bs-toggle="collapse" data-bs-target="#email-1" aria-expanded="false" aria-controls="email-1" >
-                       Subject: Where did you go last weekend?
+                <div class="container-fluid debug2"> <!-- Second row for search and navbar -->
+
+                    <button class="navbar-toggler d-lg-none debug" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <!-- NAVBAR BUTTON -->
+                        <span class="navbar-toggler-icon d-lg-none"></span> <!-- ICON FOR NAVBAR -->
                     </button>
-                </p>
-                <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
-                    <div class="collapse collapse-horizontal" id="email-1" data-bs-parent="#accordion">
-                        <div class="card card-body email-content">
-                            Test Test Test
-                        </div>
-                    </div>
+
+                    <div class="container-fluid col-10 col-lg-12 btn-spacing"> <!-- SEARCHBAR --> <!-- col-10 -->
+                        <form class="d-flex align-self-end" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                  </div>
+
                 </div>
-                <p class="text-start row email"> <!-- EMAIL-2 -->
-                    <button class="text-start btn btn-primary email-preview" type="button" data-bs-toggle="collapse" data-bs-target="#email-2" aria-expanded="false" aria-controls="email-1" >
-                       Subject: [URGENT!] New applications!
-                    </button>
-                </p>
-                <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
-                    <div class="collapse collapse-horizontal" id="email-2" data-bs-parent="#accordion">
-                        <div class="card card-body email-content">
-                            Test Test Test
-                        </div>
-                    </div>
-                </div>
-                <p class="text-start row email"> <!-- EMAIL-3 -->
-                    <button class="text-start btn btn-primary email-preview" type="button" data-bs-toggle="collapse" data-bs-target="#email-3" aria-expanded="false" aria-controls="email-1">
-                       Subject: Appointment
-                    </button>
-                </p>
-                <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
-                    <div class="collapse collapse-horizontal" id="email-3" data-bs-parent="#accordion">
-                        <div class="card card-body email-content">
-                            Test Test Test
-                        </div>
+                    
+            </nav>
+
+        </div> <!-- entire navbar container -->
+
+        <div class="container-fluid col-12 debug3 email-section" id="accordion"> <!-- email section -->
+            <p class="row email">
+                <button class="text-start btn btn-primary email-preview debug" type="button" data-bs-toggle="collapse" data-bs-target="#email-1" aria-expanded="false" aria-controls="email-1">
+                    Subject: Where did you go last weekend?
+                </button>
+            </p>
+            <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
+                <div class="collapse collapse-horizontal" id="email-1" data-bs-parent="#accordion">
+                    <div class="card card-body email-content">
+                        Test Test Test
                     </div>
                 </div>
             </div>
-                
 
-          
-
-            <footer class="footer col-12 m-0 p-0">
-                <div class="container-fluid row-cols-1 col-12 m-0 p-0"> <!-- CONTAINER FOR COMPOSE EMAIL BUTTON -->
-                    <button type="button" class="align-self-end btn btn-danger btn-lg compose-btn m-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
-                        Compose Email <!-- COMPOSE EMAIL BUTTON -->
-                    </button>
-            </footer>
-
-                <div class="offcanvas offcanvas-bottom w-100 h-100" tabindex="-1" id="compose-email" aria-labelledby="offcanvasNavbarLabel"> <!-- OFFCANVAS FOR COMPOSING EMAIL -->
-                    Compose your Email
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    <div class="offcanvas-body">
-                        <div class="container-fluid">
-                            <textarea class="col-12" name="Recipient" id="Recipient" placeholder="To:" rows="1"></textarea><br>
-                            <textarea class="col-12" name="CC" id="CC" placeholder="CC:" rows="1"></textarea><br>
-                            <textarea class="col-12" name="Subject" id="Subject" placeholder="Subject" rows="1"></textarea><br>
-                            <textarea class="col-12" name="Contents" id="Contents" placeholder="Compose"rows="15"></textarea><br>
-                            <button type="button" class="btn btn-primary col-12">
-                                Send <!-- SEND BUTTON -->
-                            </button>
-                        </div>
+            <p class="row email">
+                <button class="text-start btn btn-primary email-preview debug" type="button" data-bs-toggle="collapse" data-bs-target="#email-2" aria-expanded="false" aria-controls="email-2">
+                    Subject: [URGENT!] New applications!
+                </button>
+            </p>
+            <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
+                <div class="collapse collapse-horizontal" id="email-2" data-bs-parent="#accordion">
+                    <div class="card card-body email-content">
+                        Test Test Test
                     </div>
                 </div>
-            </div>   
+            </div>
+
+            <p class="row email">
+                <button class="text-start btn btn-primary email-preview debug" type="button" data-bs-toggle="collapse" data-bs-target="#email-3" aria-expanded="false" aria-controls="email-3">
+                    Subject: Appointment
+                </button>
+            </p>
+            <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
+                <div class="collapse collapse-horizontal" id="email-3" data-bs-parent="#accordion">
+                    <div class="card card-body email-content">
+                        Test Test Test
+                    </div>
+                </div>
+            </div>
+        </div> <!-- email section -->
+
+        <footer class="container-fluid footer col-12 m-0 p-0 debug2">
+            <div class="row col-12 m-0 p-0"> <!-- CONTAINER FOR COMPOSE EMAIL BUTTON -->
+                <button type="button" class="btn btn-danger btn-lg compose-btn m-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                    Compose Email <!-- COMPOSE EMAIL BUTTON -->
+                </button>
+        </footer>
+    </div> <!-- background -->
+
+
+    <div class="offcanvas offcanvas-start h-100 w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> <!-- Navbar selector offcanvas -->
+        <div class="offcanvas-header">
+            <div>Additional Settings</div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </div>
+
+
+        <div class="offcanvas-body"> <!-- ALL OFFCANVAS SELECTORS (NOT FUNCTIONAL YET) -->
+            <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Inbox</button>
+            <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Sent</button>
+            <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Drafts</button>
+            <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Folders</button>
+            <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Spam</button>
+            <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">More...</button>
+        </div>
+    </div> <!-- Navbar selector offcanvas -->
+
+    <div class="offcanvas offcanvas-bottom w-100 h-100 text-center p-1" tabindex="-1" id="compose-email" aria-labelledby="compose-email"><!-- Compose Email Offcanvas Selector -->
+        Compose your Email!
+        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button> <!-- X Close button -->
+        <div class="offcanvas-body">
+            <div class="container-fluid"> <!-- container of all email composition buttons -->
+                <textarea class="col-12" name="Recipient" id="Recipient" placeholder="To:" rows="1"></textarea><br>
+                <textarea class="col-12" name="CC" id="CC" placeholder="CC:" rows="1"></textarea><br>
+                <textarea class="col-12" name="Subject" id="Subject" placeholder="Subject" rows="1"></textarea><br>
+                <textarea class="col-12" name="Contents" id="Contents" placeholder="Compose"rows="15"></textarea><br>
+                <button class="btn btn-primary col-12">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div><!-- Compose Email Offcanvas Selector -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

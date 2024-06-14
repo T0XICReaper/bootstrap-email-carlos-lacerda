@@ -14,6 +14,7 @@
 
 .email-section{
     /* width: 360px; */
+    margin-top: 125px;
     min-height: 420px;
    /*  border: 3px solid blue;  */
 }
@@ -43,6 +44,12 @@
 
  .debug{
     border: 3px solid red;
+ }
+ .debug2{
+    border: 3px solid blue;
+ }
+ .debug3{
+    border: 3px solid green;
  }
  footer {
    /*  display: flex;
