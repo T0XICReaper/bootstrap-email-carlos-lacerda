@@ -8,10 +8,10 @@
     <link href=styles.css rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid text-center main-container debug row-cols-3 p-0 m-0"> <!-- background -->
-        <div class="container-fluid debug3"> <!-- Entire navbar "column" container -->
+    <div class="row container-fluid text-center debug2 p-0 m-0"> <!-- background --> <!-- Row is very important to make the resizing work -->
+        <div class="row debug3 main-container"> <!-- Entire navbar container -->
             
-            <nav class="navbar bg-body-tertiary fixed-top debug"> <!-- Navbar -->
+            <nav class="container navbar bg-body-tertiary fixed-top debug"> <!-- Navbar -->
                 
                 <div class="container-fluid debug2"> <!-- One row for the welcome message and pfp -->
                     <div class="col-6 debug"> <!-- Text on left side --> <!-- col-6 -->
@@ -19,77 +19,157 @@
                     </div>
     
                     <div class="col-6 text-end debug"> <!-- profile icon --> <!-- col-6 -->
-                        <img src="avatar.jpeg" alt="Avatar" class="avatar">
+                        <img src="avatar.jpeg" alt="Avatar" class="avatar"> <!-- link to Photo -->
                     </div>
-                </div>
+                </div> <!-- [End] One row for the welcome message and pfp -->
               
                 <div class="container-fluid debug2"> <!-- Second row for search and navbar -->
 
                     <button class="navbar-toggler d-lg-none debug" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <!-- NAVBAR BUTTON -->
                         <span class="navbar-toggler-icon d-lg-none"></span> <!-- ICON FOR NAVBAR -->
-                    </button>
+                    </button> <!-- NAVBAR BUTTON -->
 
                     <div class="container-fluid col-10 col-lg-12 btn-spacing"> <!-- SEARCHBAR --> <!-- col-10 -->
-                        <form class="d-flex align-self-end" role="search">
+                        <form class="d-flex align-self-end" role="search">  
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
                   </div>
 
-                </div>
+                </div> <!-- [End] Second row for search and navbar -->
                     
             </nav>
 
-        </div> <!-- entire navbar container -->
+        </div> <!-- [End] entire navbar container -->
+        
+        <div class="debug container-fluid col-lg-2 button-spacing d-none d-lg-block"> <!-- sidebar -->
 
-        <div class="container-fluid col-12 debug3 email-section" id="accordion"> <!-- email section -->
-            <p class="row email">
+            <div class="row">
+
+                <button type="button" class="btn btn-danger btn-lg compose-btn m-0 p-0 d-xl-none" data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                    Compose Email <!-- Compose Email button for sidebar -->
+                </button>
+
+                <button type="button" class="btn btn-danger btn-lg compose-btn m-0 p-0 d-none d-xl-block" data-bs-toggle="collapse" data-bs-target="#compose-div" aria-expanded="false" aria-controls="compose-div">
+                    Compose Email <!-- Second Compose Email button to toggle the collapse div -->
+                </button>
+            </div>
+
+            <div class="row">
+                <div class="debug"> <!-- Sidebar buttons for different folders -->
+                    <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Inbox</button>
+                    <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Sent</button>
+                    <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Drafts</button>
+                    <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Folders</button>
+                    <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Spam</button>
+                    <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">More...</button>
+                </div>
+
+            </div>
+
+        </div> <!-- [End] sidebar --> 
+
+        <div class="debug col-lg-4 collapse" id="compose-div" > <!-- compose div -->
+            Compose your Email! <br>
+
+            <button class="row btn-close" type="button" data-bs-toggle="collapse" data-bs-target="#compose-div" aria-label="Close"></button> <!-- X Close button -->
+            
+            <div class="container-fluid"> <!-- Email compose -->
+                <textarea class="col-12" name="Recipient" id="Recipient" placeholder="To:" rows="1"></textarea><br>
+                <textarea class="col-12" name="CC" id="CC" placeholder="CC:" rows="1"></textarea><br>
+                <textarea class="col-12" name="Subject" id="Subject" placeholder="Subject" rows="1"></textarea><br>
+                <textarea class="col-12" name="Contents" id="Contents" placeholder="Compose"rows="15"></textarea><br>
+
+                <button class="btn btn-primary col-12" data-bs-toggle="collapse" data-bs-target="#compose-div"> <!-- send button -->
+                    Send
+                </button>
+
+
+            </div>
+        </div> <!-- [End] compose div -->
+
+        <div class="container-fluid col debug3 email-section" id="accordion"> <!-- email section -->
+            <p class="row email"> <!-- Email button -->
                 <button class="text-start btn btn-primary email-preview debug" type="button" data-bs-toggle="collapse" data-bs-target="#email-1" aria-expanded="false" aria-controls="email-1">
                     Subject: Where did you go last weekend?
                 </button>
-            </p>
+            </p> <!-- [End] Email Button -->
             <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
                 <div class="collapse collapse-horizontal" id="email-1" data-bs-parent="#accordion">
-                    <div class="card card-body email-content">
-                        Test Test Test
+                    <div class="card card-body email-content text-start"> <!-- Subject and body -->
+                        <button class="btn col-1 debug align-self-end d-xl-none"  data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                            Reply
+                        </button>
+
+                        <button class="btn col-1 debug align-self-end d-none d-xl-block"  data-bs-toggle="collapse" data-bs-target="#compose-div" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                            Reply
+                        </button>
+                        
+                        Subject: Where did you go last weekend?<br> <br>
+                        Sender: John-Doe@superawesomeemail.com<br> <br>
+                        Body: <br> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
                     </div>
                 </div>
-            </div>
+            </div> <!-- [End] Collapsable Email Content -->
 
-            <p class="row email">
+            <p class="row email"><!-- Email button -->
                 <button class="text-start btn btn-primary email-preview debug" type="button" data-bs-toggle="collapse" data-bs-target="#email-2" aria-expanded="false" aria-controls="email-2">
                     Subject: [URGENT!] New applications!
                 </button>
-            </p>
+            </p> <!-- [End] Email Button -->
             <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
                 <div class="collapse collapse-horizontal" id="email-2" data-bs-parent="#accordion">
-                    <div class="card card-body email-content">
-                        Test Test Test
+                    <div class="card card-body email-content text-start"> <!-- Subject and body -->
+                        <button class="btn col-1 debug align-self-end d-xl-none"  data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                            Reply
+                        </button>
+                        
+                        <button class="btn col-1 debug align-self-end d-none d-xl-block"  data-bs-toggle="collapse" data-bs-target="#compose-div" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                            Reply
+                        </button>
+
+                        Subject: [URGENT!] New applications! <br> <br>
+                        Sender: Jane-Doe@superawesomeemail.com <br> <br>
+                        Body: <br> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
                     </div>
                 </div>
-            </div>
+            </div><!-- [End] Collapsable Email Content -->
 
-            <p class="row email">
+            <p class="row email"><!-- Email button -->
                 <button class="text-start btn btn-primary email-preview debug" type="button" data-bs-toggle="collapse" data-bs-target="#email-3" aria-expanded="false" aria-controls="email-3">
                     Subject: Appointment
                 </button>
-            </p>
+            </p> <!-- [End] Email Button -->
             <div class="email-box"> <!-- COLLAPSABLE EMAIL CONTENT -->
                 <div class="collapse collapse-horizontal" id="email-3" data-bs-parent="#accordion">
-                    <div class="card card-body email-content">
-                        Test Test Test
+                    <div class="card card-body email-content text-start"> <!-- Subject and body -->
+                        <button class="btn col-1 debug align-self-end d-xl-none"  data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                            Reply
+                        </button>
+                        
+                        <button class="btn col-1 debug align-self-end d-none d-xl-block"  data-bs-toggle="collapse" data-bs-target="#compose-div" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
+                            Reply
+                        </button>
+
+                        Subject: Appointment <br> <br>
+                        Sender: John-Doctor@superawesomeemail.com <br> <br>
+                        Body: <br> <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
                     </div>
                 </div>
-            </div>
-        </div> <!-- email section -->
+            </div><!-- [End] Collapsable Email Content -->
+        </div> <!-- [END] email section -->
 
-        <footer class="container-fluid footer col-12 m-0 p-0 debug2">
+        <footer class="container-fluid footer col-12 d-lg-none m-0 p-0 debug2"> <!-- Footer -->
             <div class="row col-12 m-0 p-0"> <!-- CONTAINER FOR COMPOSE EMAIL BUTTON -->
                 <button type="button" class="btn btn-danger btn-lg compose-btn m-0 p-0" data-bs-toggle="offcanvas" data-bs-target="#compose-email" aria-expanded="false" aria-controls="compose-email" aria-label="Toggle navigation">
                     Compose Email <!-- COMPOSE EMAIL BUTTON -->
                 </button>
-        </footer>
-    </div> <!-- background -->
+            </div>
+        </footer> <!-- [END] Footer -->
+    </div> <!-- [END] background -->
 
 
     <div class="offcanvas offcanvas-start h-100 w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"> <!-- Navbar selector offcanvas -->
@@ -107,9 +187,9 @@
             <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">Spam</button>
             <button type="button" class="btn btn-primary row col-12 btn-spacing m-1">More...</button>
         </div>
-    </div> <!-- Navbar selector offcanvas -->
+    </div> <!-- [END] Navbar selector offcanvas -->
 
-    <div class="offcanvas offcanvas-bottom w-100 h-100 text-center p-1" tabindex="-1" id="compose-email" aria-labelledby="compose-email"><!-- Compose Email Offcanvas Selector -->
+    <div class="offcanvas offcanvas-bottom w-100 h-100 text-center p-1 d-xl-none" tabindex="-1" id="compose-email" aria-labelledby="compose-email"><!-- Compose Email Offcanvas Selector -->
         Compose your Email!
         <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button> <!-- X Close button -->
         <div class="offcanvas-body">
@@ -121,9 +201,9 @@
                 <button class="btn btn-primary col-12">
                     Send
                 </button>
-            </div>
+            </div>  <!-- [END] container of all email composition buttons -->
         </div>
-    </div><!-- Compose Email Offcanvas Selector -->
+    </div><!-- [END] Compose Email Offcanvas Selector -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

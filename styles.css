@@ -1,20 +1,25 @@
-/* .row-cols-3{
-    flex-direction: column;
-} */
-
 .main-container{
     /* border: 3px solid blue; */
-    min-height: 100vh;
-    min-width: 100vw;
+    margin-bottom: 125px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
 }
 .compose-btn{
     /* border: 3px solid blue; */
     min-height: 120px;
 }
 
+.full-height{
+    min-height: 100vh;
+}
 .email-section{
     /* width: 360px; */
-    margin-top: 125px;
+    /* margin-top: 125px; */
+   /*  margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px; */
     min-height: 420px;
    /*  border: 3px solid blue;  */
 }
