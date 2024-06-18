@@ -1,5 +1,10 @@
+body{
+    font-family: "Bebas Neue";
+    background-color: #FFEBF2;
+    color: #3E000C;
+    height: 100vh;
+}
 .main-container{
-    /* border: 3px solid blue; */
     margin-bottom: 125px;
     margin-top: 0px;
     margin-left: 0px;
@@ -7,39 +12,82 @@
     padding: 0px;
 }
 .compose-btn{
-    /* border: 3px solid blue; */
     min-height: 120px;
 }
 
-.full-height{
-    min-height: 100vh;
+nav{
+    background-color: #FB4B4E;
 }
+
 .email-section{
-    /* width: 360px; */
-    /* margin-top: 125px; */
-   /*  margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px; */
-    min-height: 420px;
-   /*  border: 3px solid blue;  */
+
+}
+.outline{
+    border-radius: 15px;
+    outline: 3px solid #290008;
 }
 
-.email-header{
-    min-height: 145px;
+.underline{
+    border-bottom: 5px solid #290008;
 }
 
-
-.email-box{
-   min-height: 0px; 
-}
-.email-content{
-    min-height: 300px;
+.font-xxl{
+    font-size: xx-large;
 }
 
-/* .btn-spacing{
-    margin-top: 10px;
-    margin-bottom: 10px;
-} */
+.font-lg{
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.btn-danger{
+    background-color: #C80407;
+    color: #FFEBF2;
+}
+.btn-danger:hover{
+    background-color: #B40407;
+    color: #FFEBF2;
+}
+.btn-danger:active{
+    background-color: #A00306 !important;
+    color: #FFEBF2;
+}
+
+.btn-primary{
+    background-color: #FC5F62;
+}
+.btn-primary:hover{
+    background-color: #FB4B4E;
+}
+.btn-primary:active{
+    background-color: #FB373A !important;
+}
+
+.reply-btn{
+    background-color: #F7A1B9;
+}
+.reply-btn:hover{
+    background-color: #F58EAC;
+}
+.reply-btn:active{
+    background-color: #F47C9E !important;
+}
+
+.btn-outline-success{
+    border: 1px solid #BC1041;
+    color: #BC1041; 
+}
+
+.btn-outline-success:hover{
+    /* border: 1px solid #BC1041; */
+    /* color: #BC1041;  */
+    background-color: #BC1041;
+}
+
+.btn-outline-success:active{
+    background-color: #BC1041 !important;
+}
+
 .avatar {
     vertical-align: middle;
     width: 50px;
@@ -47,26 +95,13 @@
     border-radius: 50%;
  }
 
- .debug{
-    border: 3px solid red;
- }
- .debug2{
-    border: 3px solid blue;
- }
- .debug3{
-    border: 3px solid green;
- }
  footer {
-   /*  display: flex;
-    justify-content: center; */
-    /* border: 3px solid green; */
     position: fixed;
     bottom: 0;
 }
 
-/* @media screen and (min-width: 1200px){
-    .compose-btn{
-        width: 300px;
-        height: 165px;
-    }
-} */
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
